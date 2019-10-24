@@ -1,0 +1,40 @@
+
+
+Observation : 
+1. the data is non-null
+2. There are several missing values in some categorical attributes, all coded with the "unknown" label
+3. As per previuos campaign, 1373 customers have taken it (which is 3.33 % only)
+4. As per our dataset, only 3 customers have default credit loan
+5. As per our dataset, 21576 customers have housing loan
+6. As per our dataset, 6248 customers have personal loan
+7. As per our dataset, 4640 customers have taken term deposit
+8. avrage duration spent on call for previous outcome, that have taken the 'term deposit' is 553 sec and those who haven't taken spends time around 220 sec..
+It's obvious as the person who has to take term deposit will try to take much information on call.
+9. 8.83% nonexistent cases, 14.2% cases and 65.11% cases of previous campaign have taken the term deposit
+10. Those who have taken Term Deposit (target), maximum are married (2532), or may have admin job (1352) or may have university.degree (1670)
+11. Maximum persons taking term deposit lies in age group :30-35
+12. creating a new age_range column to specify the age pattern better
+13. We have already shown the age in distribution plot that age group of around 30-36 takes "Term deposit" the most.
+We have just named the age-group section and it kinda of make sense also, if we want to use it as a column in machine learning modelling
+14. 
+
+Conclusion : 
+1. we have dropped every row that contained "unknown"
+2. DecisionTreeClassifier(criterion="entropy", max_depth=3). got the decision tree values from the tuning done below
+3. with the help of current columns, our model is able to predict accuracy from 0.82 to 0.89 by tuning and 0.61 auc to 0.69 auc after tuning, for decision trees.
+let's increase our columns
+4. DecisionTreeClassifier(criterion='gini', max_depth= 4)
+with increase in number of columns, our model is able to predict 0.86 accuracy to 0.88 acc and from 0.63 to 0.71 auc for decision tree, after tuning.
+So, we have some importance in it
+5. with the help of current columns, our model is able to predict 0.88 accuracy and 0.67 auc for logistic regression.
+let's increase our columns
+6. with increase in number of columns, our model is able to predict 0.88 accuracy and 0.69 auc for logistic regression.
+So, we have some importance in it
+ 
+
+
+
+
+
+
+
